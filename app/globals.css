@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -85,7 +85,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Overpass", sans-serif;
     font-weight: 300;
     line-height: 1.6;
     color: var(--text-color);
@@ -116,7 +116,7 @@
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -215,7 +215,7 @@
   font-weight: 500;
   color: var(--text-color);
   margin-bottom: 1rem;
-  font-family: 'Clash Display', sans-serif;  /* More modern font for headers */
+  font-family: "Clash Display", sans-serif;
 }
 
 .feature-card p {
@@ -548,7 +548,7 @@ section h2,
 .location-card h3,
 .contact h3,
 .cta-section h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
   font-weight: 700;
 }
 /* Adjust CTA image size for tablet and mobile */
@@ -576,7 +576,7 @@ p,
 .location-card p,
 .contact p,
 .cta-section p {
-  font-family: 'Overpass', sans-serif;
+  font-family: "Overpass", sans-serif;
   font-weight: 300;
 }
 

@@ -44,7 +44,7 @@ export default function Home() {
           <div className="logo">
             <Image 
               src="/images/logo.png" 
-              alt="Sarah's Assisted Living"
+              alt="Sarah&apos;s Assisted Living"
               width={250}
               height={100}
               priority
@@ -61,7 +61,7 @@ export default function Home() {
         
         <div className="hero">
           <div className="hero-content">
-            <h1>Welcome to Sarah's Assisted Living</h1>
+            <h1>Welcome to Sarah&apos;s Assisted Living</h1>
             <p>We empower seniors with 24/7 support to live life on their terms!</p>
             <div className="hero-buttons">
               <button className="cta-button" onClick={handleCallClick}>Call Today</button>
@@ -83,11 +83,11 @@ export default function Home() {
 
       <section id="why-choose" className="why-choose">
         <div className="p-8 rounded-xl" style={{ backgroundColor: 'var(--light-bg)' }}>
-          <h2>Why Choose Sarah's Assisted Living?</h2>
+          <h2>Why Choose Sarah&apos;s Assisted Living?</h2>
           <div className="features">
             <div className="feature-card">
               <h3>Personalized Care</h3>
-              <p>We provide individualized care plans to meet each resident's unique needs.</p>
+              <p>We provide individualized care plans to meet each resident&apos;s unique needs.</p>
             </div>
             
             <div className="feature-card">
@@ -150,7 +150,7 @@ export default function Home() {
               <span className="star">★</span>
             </div>
             <h3>Lynne Steele</h3>
-            <p>Highly recommend Sarah's Great Life. Everyone involved was very caring and proved to be a great resource of knowledge to me in the care of my father. Thomas, owner, very communicative and always responded timely. Caregivers Brandee and DeeDee, both amazing. It was very reassuring to walk in or text to get an immediate update on diet, or care. Will always be grateful to all 3.</p>
+            <p>Highly recommend Sarah&apos;s Great Life. Everyone involved was very caring and proved to be a great resource of knowledge to me in the care of my father. Thomas, owner, very communicative and always responded timely. Caregivers Brandee and DeeDee, both amazing. It was very reassuring to walk in or text to get an immediate update on diet, or care. Will always be grateful to all 3.</p>
           </div>
           <div className="testimonial-card">
             <div className="star-rating">
@@ -161,7 +161,7 @@ export default function Home() {
               <span className="star">★</span>
             </div>
             <h3>Michael Bouchard</h3>
-            <p>My sister has been at Sarah's for almost 2 years and she is extremely well cared for. Thomas is the kindest and most caring man who helped make the transition for my family very easy. The caregivers go above and beyond to ensure safety and dignity. I'd give more stars if I could!</p>
+            <p>My sister has been at Sarah&apos;s for almost 2 years and she is extremely well cared for. Thomas is the kindest and most caring man who helped make the transition for my family very easy. The caregivers go above and beyond to ensure safety and dignity. I&apos;d give more stars if I could!</p>
           </div>
         </div>
       </section>
@@ -175,34 +175,34 @@ export default function Home() {
           <div className="location-card">
             <Image 
               src="/images/location1.jpg"
-              alt="Sarah's Great Life - Wildomar"
+              alt="Sarah&apos;s Great Life - Wildomar"
               width={400}
               height={300}
               className="location-image"
             />
-            <h3>Sarah's Great Life - Wildomar</h3>
+            <h3>Sarah&apos;s Great Life - Wildomar</h3>
             <p>32773 Wildomar Way, Wildomar, CA 92595</p>
           </div>
           <div className="location-card">
             <Image 
               src="/images/location2.jpg"
-              alt="Sarah's Good Life - Sun City"
+              alt="Sarah&apos;s Good Life - Sun City"
               width={400}
               height={300}
               className="location-image"
             />
-            <h3>Sarah's Good Life - Sun City</h3>
+            <h3>Sarah&apos;s Good Life - Sun City</h3>
             <p>26171 Fountain Bleu Dr, Menifee, CA 92586</p>
           </div>
           <div className="location-card">
             <Image 
               src="/images/location3.jpg"
-              alt="Sarah's Best Life - Murrieta"
+              alt="Sarah&apos;s Best Life - Murrieta"
               width={400}
               height={300}
               className="location-image"
             />
-            <h3>Sarah's Best Life - Murrieta</h3>
+            <h3>Sarah&apos;s Best Life - Murrieta</h3>
             <p>33769 Salvia Ln, Murrieta, CA 92563</p>
           </div>
         </div>
