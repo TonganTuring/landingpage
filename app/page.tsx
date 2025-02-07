@@ -255,7 +255,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <p>Made with Cursor and Next.js</p>
+        <p>Made with Cursor, Next.js, Tailwind CSS, GitHub, and Vercel</p>
       </footer>
     </main>
   )
