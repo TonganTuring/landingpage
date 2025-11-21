@@ -207,8 +207,8 @@
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 0;
   border-radius: 20px;
 }
 
@@ -416,7 +416,6 @@ footer {
 }
 
 /* Grid Layouts */
-.features,
 .service-cards,
 .testimonial-cards,
 .location-cards {
@@ -494,7 +493,12 @@ footer {
 /* Responsive Design */
 @media (max-width: 1024px) {
   /* Tablet and smaller */
-  .features,
+  .features {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem;
+    padding: 0;
+  }
+  
   .service-cards,
   .testimonial-cards,
   .location-cards {

@@ -7,6 +7,24 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sarah's Assisted Living",
   description: "We empower seniors with 24/7 support to live life on their terms!",
+  openGraph: {
+    title: "Sarah's Assisted Living",
+    description: "We empower seniors with 24/7 support to live life on their terms!",
+    images: [
+      {
+        url: "/images/location1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sarah's Assisted Living Location",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sarah's Assisted Living",
+    description: "We empower seniors with 24/7 support to live life on their terms!",
+    images: ["/images/location1.jpg"],
+  },
   icons: {
     icon: [
       {
