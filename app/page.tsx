@@ -1,8 +1,11 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from 'next/image'
+import { CallTodayButton } from "@/components/CallTodayButton"
+import { LocationCard } from "@/components/LocationCard"
+import { ReviewCard } from "@/components/ReviewCard"
+import reviewsData from "@/data/reviews.json"
 
 export default function Home() {
   // Handle smooth scrolling for navigation links
@@ -21,21 +24,6 @@ export default function Home() {
     }
   };
 
-  const handleCallClick = () => {
-    window.location.href = 'tel:+19513271461';
-  };
-
-  const handleTestimonialClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    const element = document.querySelector('#testimonials');
-    if (element) {
-      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 100;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <main>
@@ -55,7 +43,9 @@ export default function Home() {
             <a href="#services" onClick={handleNavClick}>Services</a>
             <a href="#testimonials" onClick={handleNavClick}>Testimonials</a>
             <a href="#locations" onClick={handleNavClick}>Locations</a>
-            <button className="cta-button" onClick={handleCallClick}>Call Today</button>
+          </div>
+          <div className="nav-cta">
+            <CallTodayButton />
           </div>
         </nav>
         
@@ -64,8 +54,7 @@ export default function Home() {
             <h1>Welcome to Sarah&apos;s Assisted Living</h1>
             <p>We empower seniors with 24/7 support to live life on their terms!</p>
             <div className="hero-buttons">
-              <button className="cta-button" onClick={handleCallClick}>Call Today</button>
-              <button className="secondary-button" onClick={handleTestimonialClick}>Read Testimonials</button>
+              <CallTodayButton fullWidth />
             </div>
           </div>
           <div className="hero-image">
@@ -82,7 +71,7 @@ export default function Home() {
       </header>
 
       <section id="why-choose" className="why-choose">
-        <div className="p-8 rounded-xl" style={{ backgroundColor: 'var(--light-bg)' }}>
+        <div className="p-8 rounded-xl">
           <h2>Why Choose Sarah&apos;s Assisted Living?</h2>
           <div className="features">
             <div className="feature-card">
@@ -125,86 +114,32 @@ export default function Home() {
       </section>
 
       <div className="section-header">
-        <h2>Testimonials</h2>
-      </div>
-
-      <section id="testimonials" className="testimonials">
-        <div className="testimonial-cards">
-          <div className="testimonial-card">
-            <div className="star-rating">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-            </div>
-            <h3>Katharine Vaughn</h3>
-            <p>I work for a local hospice agency and this is an AMAZING Board and Care. I refer my patients here whenever I get the chance! The owners are amazing, as well as the entire staff! Residents like her own family. The care she provides goes above and beyond. The house is clean, safe and in a wonderful neighborhood in Wildomar.</p>
-          </div>
-          <div className="testimonial-card">
-            <div className="star-rating">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-            </div>
-            <h3>Lynne Steele</h3>
-            <p>Highly recommend Sarah&apos;s Great Life. Everyone involved was very caring and proved to be a great resource of knowledge to me in the care of my father. Thomas, owner, very communicative and always responded timely. Caregivers Brandee and DeeDee, both amazing. It was very reassuring to walk in or text to get an immediate update on diet, or care. Will always be grateful to all 3.</p>
-          </div>
-          <div className="testimonial-card">
-            <div className="star-rating">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-            </div>
-            <h3>Michael Bouchard</h3>
-            <p>My sister has been at Sarah&apos;s for almost 2 years and she is extremely well cared for. Thomas is the kindest and most caring man who helped make the transition for my family very easy. The caregivers go above and beyond to ensure safety and dignity. I&apos;d give more stars if I could!</p>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-header">
         <h2>Our Locations</h2>
       </div>
 
       <section id="locations" className="locations">
         <div className="location-cards">
-          <div className="location-card">
-            <Image 
-              src="/images/location1.jpg"
-              alt="Sarah&apos;s Great Life - Wildomar"
-              width={400}
-              height={300}
-              className="location-image"
-            />
-            <h3>Sarah&apos;s Great Life - Wildomar</h3>
-            <p>32773 Wildomar Way, Wildomar, CA 92595</p>
-          </div>
-          <div className="location-card">
-            <Image 
-              src="/images/location2.jpg"
-              alt="Sarah&apos;s Good Life - Sun City"
-              width={400}
-              height={300}
-              className="location-image"
-            />
-            <h3>Sarah&apos;s Good Life - Sun City</h3>
-            <p>26171 Fountain Bleu Dr, Menifee, CA 92586</p>
-          </div>
-          <div className="location-card">
-            <Image 
-              src="/images/location3.jpg"
-              alt="Sarah&apos;s Best Life - Murrieta"
-              width={400}
-              height={300}
-              className="location-image"
-            />
-            <h3>Sarah&apos;s Best Life - Murrieta</h3>
-            <p>33769 Salvia Ln, Murrieta, CA 92563</p>
-          </div>
+          <LocationCard
+            imageSrc="/images/location1.jpg"
+            imageAlt="Sarah's Great Life - Wildomar"
+            title="Sarah's Great Life - Wildomar"
+            address="32773 Wildomar Way, Wildomar, CA 92595"
+            href="https://maps.app.goo.gl/L6zRcyhChLSRuBDRA"
+          />
+          <LocationCard
+            imageSrc="/images/location2.jpg"
+            imageAlt="Sarah's Good Life - Sun City"
+            title="Sarah's Good Life - Sun City"
+            address="26171 Fountain Bleu Dr, Menifee, CA 92586"
+            href="https://maps.app.goo.gl/74Q1c4MzvKsfJMGy6"
+          />
+          <LocationCard
+            imageSrc="/images/location3.jpg"
+            imageAlt="Sarah's Best Life - Murrieta"
+            title="Sarah's Best Life - Murrieta"
+            address="33769 Salvia Ln, Murrieta, CA 92563"
+            href="https://maps.app.goo.gl/iEVfsHAQQJUcPciZ8"
+          />
         </div>
       </section>
 
@@ -213,26 +148,44 @@ export default function Home() {
       </div>
 
       <section className="contact">
-        <div className="contact-info grid grid-cols-2 gap-8">
+        <div className="contact-info grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           <div className="phone">
             <h3>Phone</h3>
             <a 
-              href="tel:+19513271461" 
+              href="tel:+19512515467" 
               className="contact-link"
-              onClick={handleCallClick}
             >
-              (951)-327-1461
+              951-251-5467
             </a>
           </div>
           <div className="email">
             <h3>Email</h3>
             <a 
               href="mailto:SarahsAssistedLiving@gmail.com"
-              className="contact-link"
+              className="contact-link break-words"
             >
               SarahsAssistedLiving@gmail.com
             </a>
           </div>
+        </div>
+      </section>
+
+      <div className="section-header">
+        <h2>Testimonials</h2>
+        <p className="testimonials-subtitle">See what families are saying about Sarah&apos;s Assisted Living</p>
+      </div>
+
+      <section id="testimonials" className="testimonials">
+        <div className="testimonial-cards">
+          {reviewsData.reviews.map((review, index) => (
+            <ReviewCard
+              key={index}
+              name={review.name}
+              rating={review.rating}
+              date={review.date}
+              review={review.review}
+            />
+          ))}
         </div>
       </section>
 
@@ -249,13 +202,13 @@ export default function Home() {
           </div>
           <div className="cta-content w-1/2">
             <h2>Ready to Find the Right Care?</h2>
-            <button className="cta-button" onClick={handleCallClick}>Call Today</button>
+            <CallTodayButton />
           </div>
         </div>
       </section>
 
-      <footer>
-        <p>Made with Cursor, Next.js, Tailwind CSS, GitHub, and Vercel</p>
+      <footer className="footer">
+        <p>Copyrights 2025 | Privacy Policy | LIC #331880756</p>
       </footer>
     </main>
   )
